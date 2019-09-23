@@ -69,6 +69,8 @@ Here I detail potential improvements and new features.
 
 2. Add infinite scroll to the auto suggest gene list.
 
+3. Load initial data via server side rendering.
+
 ### New Features
 
 1. Ability to bookmark specific genes.
