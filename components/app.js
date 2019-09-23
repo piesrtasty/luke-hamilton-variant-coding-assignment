@@ -54,10 +54,12 @@ const App = () => {
   }
 
   const handleOnSubmit = keyword => {
-    setIsLoading(true)
-    setSearchTerm(keyword)
-    setResults([])
-    fetchResults(DIRECT)
+    if (keyword) {
+      setIsLoading(true)
+      setSearchTerm(keyword)
+      setResults([])
+      fetchResults(DIRECT)
+    }
   }
 
   useEffect(() => {

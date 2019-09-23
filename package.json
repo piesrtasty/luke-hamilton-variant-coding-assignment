@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
@@ -14,5 +15,11 @@
     "next": "9.0.6",
     "react": "16.9.0",
     "react-dom": "16.9.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.9.0"
   }
 }

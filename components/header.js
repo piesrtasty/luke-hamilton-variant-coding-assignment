@@ -42,8 +42,10 @@ const Header = ({ handleOnSubmit }) => {
     <Container>
       <SuggestionInput handleOnSubmit={handleOnSubmit} />
       <TableHead>
-        {HEAD_SLUGS.map(slug => (
-          <HeadField>{FIELD_LABELS[slug]}</HeadField>
+        {HEAD_SLUGS.map((slug, index) => (
+          <HeadField key={`head-field-${slug}-${index}`}>
+            {FIELD_LABELS[slug]}
+          </HeadField>
         ))}
         <HeadField>More Info</HeadField>
       </TableHead>

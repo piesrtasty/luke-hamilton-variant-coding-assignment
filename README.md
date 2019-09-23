@@ -34,11 +34,19 @@ Query Params
 
 `page` - Pagination page number
 
-## Build / Run / Test
+## Commands
+
+### Install
+
+`npm install`
 
 ### Start development server
 
 `npm run dev`
+
+### Run tests
+
+`npm run test`
 
 ### Build for production
 

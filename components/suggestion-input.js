@@ -12,7 +12,7 @@ const Container = styled('div')({
   }
 })
 
-const StyledButton = styled(Button)({
+export const StyledButton = styled(Button)({
   height: 50,
   paddingLeft: 15,
   paddingRight: 15
@@ -123,13 +123,7 @@ const SuggestionsInput = ({ handleOnSubmit }) => {
           </Suggestions>
         )}
       </InputWrapper>
-      <StyledButton
-        onClick={() => {
-          if (keyword) {
-            handleOnSubmit(keyword)
-          }
-        }}
-      >
+      <StyledButton onClick={() => handleOnSubmit(keyword)}>
         Submit
       </StyledButton>
     </Container>

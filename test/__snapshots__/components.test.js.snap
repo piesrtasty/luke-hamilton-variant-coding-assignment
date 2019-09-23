@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header it renders correctly 1`] = `
+<div
+  className="css-1yryf18-Container e10so7i70"
+>
+  <div
+    className="css-1gvxlg9-Container e14bnm7i0"
+  >
+    <div
+      className="css-ss2xpo-InputWrapper e14bnm7i2"
+    >
+      <input
+        className="css-ox8hf7-Input e1i9eloy0"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Search for a gene"
+        value=""
+      />
+    </div>
+    <button
+      className="css-iadm0u-StyledButton e14bnm7i1"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+  <div
+    className="css-ylx3i7-TableHead e10so7i72"
+  >
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Gene
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Nucleotide Change
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Protein Change
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Alias
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Region
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Reported Classification
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Last Evaluated
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      Last Updated
+    </div>
+    <div
+      className="css-qbgrms-HeadField e10so7i71"
+    >
+      More Info
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SuggestionInput it renders correctly 1`] = `
+<div
+  className="css-1gvxlg9-Container e14bnm7i0"
+>
+  <div
+    className="css-ss2xpo-InputWrapper e14bnm7i2"
+  >
+    <input
+      className="css-ox8hf7-Input e1i9eloy0"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Search for a gene"
+      value=""
+    />
+  </div>
+  <button
+    className="css-iadm0u-StyledButton e14bnm7i1"
+    onClick={[Function]}
+  >
+    Submit
+  </button>
+</div>
+`;
+
+exports[`Table Item Row it renders correctly not shaded 1`] = `
+<div
+  className="css-qd2p6w-Container eb9w5ky1"
+>
+  <div
+    className="css-19zq68w-Row eb9w5ky3"
+    onClick={[Function]}
+  >
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      AMY1A
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      not provided
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      2017-09-14
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      <a
+        href="https://www.ncbi.nlm.nih.gov/clinvar/RCV000161176"
+        target="_blank"
+      >
+        ClinVar
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table Item Row it renders correctly shaded 1`] = `
+<div
+  className="css-vq9p01-Container eb9w5ky1"
+>
+  <div
+    className="css-19zq68w-Row eb9w5ky3"
+    onClick={[Function]}
+  >
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      RHD
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      not provided
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      2017-09-14
+    </div>
+    <div
+      className="css-vqbiuz-Field eb9w5ky2"
+    >
+      <a
+        href="https://www.ncbi.nlm.nih.gov/clinvar/RCV000161157"
+        target="_blank"
+      >
+        ClinVar
+      </a>
+    </div>
+  </div>
+</div>
+`;

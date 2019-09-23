@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DebouncedInput it renders correctly 1`] = `
+<input
+  className="css-ox8hf7-Input e1i9eloy0"
+  onChange={[Function]}
+/>
+`;
