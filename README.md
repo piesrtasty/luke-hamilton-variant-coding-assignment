@@ -10,6 +10,8 @@ Updating the search bar with a gene that is selected by pressing enter needs to 
 
 I need to return a `hasNextPage` boolean from the `fetchResults` call so I can avoid triggering an infinite scroll search if there are no more pages.
 
+A placeholder for when there are no search results should also be added.
+
 Additionally there is just general state organization that can be improved. I will continue to work on these areas.
 
 ## Features / Requiremewnts
