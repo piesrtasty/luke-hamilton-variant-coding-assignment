@@ -2,6 +2,10 @@
 
 A web application that allows a user to search for genomic variants by gene name and display the results in a tabular view.
 
+## Disclaimer
+
+I am aware that there are some usability bugs still. For example updating the search bar with a gene that is selected by pressing enter. Additionally there is just general state organization that can be improved. I will continue to work on these areas.
+
 ## Features / Requiremewnts
 
 1. Allow the user to enter a gene name to search for variants in that gene. Display the results in a table that shows various attributes associated with each genomic variant.
