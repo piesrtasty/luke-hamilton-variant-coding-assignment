@@ -79,6 +79,8 @@ Here I detail potential improvements and new features.
 
 3. Load initial data via server side rendering.
 
+4. Save the data in a database on the backend instead of serving it from a JSON file. This will improve performance as I would not need to filter and slice the array to implement the search.
+
 ### New Features
 
 1. Ability to bookmark specific genes.
