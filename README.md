@@ -1,8 +1,16 @@
 # Luke Hamilton Variant Coding Assignment
 
-## API Endpoints
+A web application that allows a user to search for genomic variants by gene name and display the results in a tabular view.
 
-#
+## Features / Requiremewnts
+
+1. Allow the user to enter a gene name to search for variants in that gene. Display the results in a table that shows various attributes associated with each genomic variant.
+
+2. Provide an auto-suggest feature for entering the gene name.
+
+3. Provide two RESTful endpoints supporting the functionality listed in steps 1 and 2.
+
+## API Endpoints
 
 ### Genes
 
@@ -26,9 +34,7 @@ Query Params
 
 `page` - Pagination page number
 
-## Build / Run
-
-#
+## Build / Run / Test
 
 ### Start development server
 
@@ -51,13 +57,9 @@ node cleanData
 
 ## Deployed App
 
-#
-
 https://luke-hamilton-variant-coding-assignment-65yi5r5s0.now.sh/
 
 ## Next Steps
-
-#
 
 Here I detail potential improvements and new features.
 
