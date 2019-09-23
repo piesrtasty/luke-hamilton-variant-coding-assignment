@@ -5,16 +5,18 @@ const DebouncedInput = ({
   onChange,
   wait = 300,
   placeholder,
-  value,
-  onKeyDown
+  onKeyDown,
+  setCurrentVal
 }) => {
   const doChange = debounce(onChange, wait)
   const handleChange = event => doChange(event.target.value)
   return (
     <Input
-      onChange={handleChange}
+      onChange={e => {
+        setCurrentVal(e.target.value)
+        handleChange(e)
+      }}
       placeholder={placeholder}
-      value={value}
       onKeyDown={onKeyDown}
     />
   )

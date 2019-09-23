@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { Container, Panel } from '../shared/library/layout'
+import { BASE_TEXT } from '../shared/style/typography'
 import Skeleton from '../shared/library/skeleton'
 import Item from './item'
 import Header from './header'
@@ -8,6 +9,7 @@ import Header from './header'
 import useInfiniteScroll from '../shared/hooks/infinite-scroll'
 
 const DIRECT = 'direct'
+const INFINITE = 'infinite'
 
 const StyledContainer = styled(Container)({
   minHeight: '100%'
@@ -30,36 +32,47 @@ const Loading = styled('div')({
   marginBottom: 20
 })
 
+const Placeholder = styled('div')({
+  ...BASE_TEXT,
+  textAlign: 'center',
+  fontSize: 16,
+  width: '100%',
+  margin: 20
+})
+
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('')
   const [page, setPage] = useState(1)
   const [results, setResults] = useState([])
+  const [query, setQuery] = useState('')
+  const [hasSearched, setHasSearched] = useState(false)
 
   const [isLoading, setIsLoading] = useInfiniteScroll(() => {
     setTimeout(() => {
       setPage(page + 1)
-      fetchResults()
+      fetchResults(INFINITE)
     }, 300)
   })
 
-  const fetchResults = type => {
-    fetch(`/api/variants?keyword=${searchTerm}&page=${page}`)
+  const fetchResults = (type = DIRECT) => {
+    if (!hasSearched) {
+      setHasSearched(true)
+    }
+    fetch(`/api/variants?keyword=${query ? query : ''}&page=${page}`)
       .then(response => response.json())
       .then(data => {
-        type === DIRECT
-          ? setResults(data.items)
-          : setResults([...results, ...data.items])
+        type === INFINITE
+          ? setResults([...results, ...data.items])
+          : setResults(data.items)
         setIsLoading(false)
       })
   }
 
   const handleOnSubmit = keyword => {
-    if (keyword) {
-      setIsLoading(true)
-      setSearchTerm(keyword)
-      setResults([])
-      fetchResults(DIRECT)
-    }
+    setPage(1)
+    setQuery(keyword)
+    setIsLoading(true)
+    setResults([])
+    fetchResults()
   }
 
   useEffect(() => {
@@ -72,11 +85,16 @@ const App = () => {
       <StyledContainer>
         <StyledPanel>
           <Header handleOnSubmit={handleOnSubmit} />
-          <List>
-            {results.map((result, index) => (
-              <Item data={result} shaded={index % 2} />
-            ))}
-          </List>
+          {results.length > 0 ? (
+            <List>
+              {results.map((result, index) => (
+                <Item data={result} shaded={index % 2} />
+              ))}
+            </List>
+          ) : (
+            ''
+          )}
+
           {isLoading ? (
             <Loading>
               <Skeleton />

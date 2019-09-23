@@ -50,6 +50,7 @@ const Suggestion = styled('div')(
 const SuggestionsInput = ({ handleOnSubmit }) => {
   const [suggestions, setSuggestions] = useState([])
   const [keyword, setKeyword] = useState('')
+  const [currentVal, setCurrentVal] = useState('')
   const [suggestionsVisible, setSuggestionsVisible] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(null)
   const inputEl = useRef()
@@ -65,10 +66,11 @@ const SuggestionsInput = ({ handleOnSubmit }) => {
   }
 
   const handleSelect = item => {
+    setCurrentVal(item)
     setSuggestionsVisible(false)
     setKeyword(item)
     inputEl.current.children[0].focus()
-    handleOnSubmit(keyword)
+    handleOnSubmit(item)
   }
 
   const handleOnChange = keyword => {
@@ -105,10 +107,13 @@ const SuggestionsInput = ({ handleOnSubmit }) => {
     <Container>
       <InputWrapper ref={inputEl}>
         <DebouncedInput
-          value={keyword}
+          value={currentVal}
           placeholder="Search for a gene"
           onKeyDown={handleOnKeyDown}
-          onChange={keyword => handleOnChange(keyword)}
+          setCurrentVal={setCurrentVal}
+          onChange={keyword => {
+            handleOnChange(keyword)
+          }}
         />
         {suggestions.length > 0 && suggestionsVisible && (
           <Suggestions ref={suggestionsEl}>
@@ -123,7 +128,13 @@ const SuggestionsInput = ({ handleOnSubmit }) => {
           </Suggestions>
         )}
       </InputWrapper>
-      <StyledButton onClick={() => handleOnSubmit(keyword)}>
+      <StyledButton
+        onClick={() => {
+          setSuggestionsVisible(false)
+          console.log('inside keyword', keyword)
+          handleOnSubmit(keyword)
+        }}
+      >
         Submit
       </StyledButton>
     </Container>
