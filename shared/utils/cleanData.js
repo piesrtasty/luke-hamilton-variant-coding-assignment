@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 const lineReader = require('readline').createInterface({
-  input: require('fs').createReadStream('variants.tsv')
+  input: require('fs').createReadStream('../../data/variants.tsv')
 })
 
 const FIELDS = [
@@ -48,7 +48,7 @@ lineReader.on('line', function(line) {
 
 lineReader.on('close', () => {
   const jsonContent = JSON.stringify(output)
-  fs.writeFile('output.json', jsonContent, 'utf8', function(err) {
+  fs.writeFile('../../data/variants.json', jsonContent, 'utf8', function(err) {
     if (err) {
       return console.log(err)
     }
