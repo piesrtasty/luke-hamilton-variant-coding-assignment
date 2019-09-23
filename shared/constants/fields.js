@@ -36,6 +36,8 @@ export const HEAD_SLUGS = [
 ]
 
 export const OTHER_SLUGS = [
+  'nucleotideChange',
+  'proteinChange',
   'otherMappings',
   'transcripts',
   'inferredClassification',
