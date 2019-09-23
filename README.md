@@ -4,7 +4,13 @@ A web application that allows a user to search for genomic variants by gene name
 
 ## Disclaimer
 
-I am aware that there are some usability bugs still especially with the infintie scroll and replacing or appending the items if it's a new search or a continuation of a paginated one. Updating the search bar with a gene that is selected by pressing enter needs to be added as well. Additionally there is just general state organization that can be improved. I will continue to work on these areas.
+I am aware that there are some usability bugs still especially with the infintie scroll and replacing or appending the items if it's a new search or a continuation of a paginated one.
+
+Updating the search bar with a gene that is selected by pressing enter needs to be added as well.
+
+I need to return a `hasNextPage` boolean from the `fetchResults` call so I can avoid triggering an infinite scroll search if there are no more pages.
+
+Additionally there is just general state organization that can be improved. I will continue to work on these areas.
 
 ## Features / Requiremewnts
 
